@@ -12,7 +12,11 @@
 
 (https://www.jma.go.jp/bosai/forecast/data/forecast/130000.json)
 
-```
+<details>
+<summary>JSON ファイル</summary>
+<div>
+
+```json
 [
   {
     "publishingOffice": "気象庁",
@@ -386,7 +390,9 @@
 ]
 ```
 
-<br><br>
+</div>
+</details>
+<br>
 
 <!--
 #### 気象庁ウェブサイト HTML ソース
