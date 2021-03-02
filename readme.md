@@ -1,7 +1,10 @@
 ## Japan Meteorological Agency
 
-気象庁のウェブサイトから情報を取得するスクリプト。
-※ PHP でスクレイピングする
+気象庁のウェブサイトから情報を取得するスクリプト。<br>
+
+※ PHP で JSON を取得して必要なデータのみを JSON に出力する<br>
+
+<del>※ PHP でスクレイピングする</del>
 
 <br><br>
 
