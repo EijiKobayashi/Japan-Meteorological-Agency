@@ -12,10 +12,18 @@ $forecast = json_decode($jma, true);
 //echo $forecast[0]['timeSeries'][2]['areas'][0]['temps'][0];
 
 $entries = [];
-$datetime = date('Y-m-d H:i:s');
+$update = date('Y-m-d H:i:s');
 $venue = $forecast[0]['timeSeries'][0]['areas'][0]['area']['name'];
 $venue = str_replace('地方', '', $venue);
 $day = $forecast[0]['reportDatetime'];
+$datetime = DateTime::createFromFormat('Y-m-d\TH:i:s+', $day);
+$datetime = (array)$datetime;
+$year = new DateTime($datetime['date']);
+$year = $year->format('Y');
+$month = new DateTime($datetime['date']);
+$month = $month->format('n');
+$day = new DateTime($datetime['date']);
+$day = $day->format('j');
 $weather = $forecast[0]['timeSeries'][0]['areas'][0]['weathers'][0];
 $weather_id = '';
 $weather_image = '';
@@ -72,8 +80,10 @@ if ( !$temp ) {
 }
 
 $entries[] = [
-  'datetime'      => $datetime,
+  'update'        => $update,
   'venue'         => $venue,
+  'year'          => $year,
+  'month'         => $month,
   'day'           => $day,
   'weather'       => $weather,
   'weather_id'    => $weather_id,
