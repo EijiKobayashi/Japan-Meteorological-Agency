@@ -36,7 +36,7 @@ if ( $codes == '100' || $codes == '500' ) {
   $weather_image = 'sunny.png';
 } elseif ( $codes == '200' ) {
   $weather_id = '2';
-  $weather_image = 'cloudly.png';
+  $weather_image = 'cloudy.png';
 } elseif ( $codes == '300' || $codes == '308' ) {
   $weather_id = '3';
   $weather_image = 'rain.png';
